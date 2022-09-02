@@ -1,232 +1,238 @@
 
 <html>
-<head>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-  <link rel='SHORTCUT ICON' href='holt-h.png' type='image/x-icon' />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY3QP72TFW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LY3QP72TFW');
-</script>
-  <style>
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,700");
-*, *::after, *::before{
-  margin: 0;
-  padding: 0;
-  box-sizing:border-box;
-}
-body{
-  font-family: "proxima-nova", sans-serif;
-  //background: #000000;
-}
-    body, p, input, label {
-  font-size: 18px;
-}
- @media screen and (min-width: 900px) {
-  body, p, input, label  {
-  font-size: 24px;
+  <head>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel='SHORTCUT ICON' href='holt-h.png' type='image/x-icon' />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY3QP72TFW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-LY3QP72TFW');
+  </script>
+    <style>
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,700");
+  *, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
   }
-      iframe {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 900px;
-}
-       h3 {
-             width: 50%;
-}
-
-.header a {
-  float: left;
-  color: black;
-  text-align: left;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
-}
-        }
-@media screen and (min-width: 320px) {
-  body, p, input, label  {
-    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  body, footer, form, div {
+    font-family: "proxima-nova", sans-serif;
+    //background: #000000;
   }
-  iframe {
-  width: 100%;
-  height: 900px;
-}
- h3 {
-  width: 70%;
-}
-.header {
-  text-align: center;
-}
-.header a {
-  float: center;
-  color: black;
-  text-align: center;
-  align-content: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
-}
-}
-div.c{
-  position: relative;
-  margin:1em;
-}
-input{
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  opacity:0;
-  visibility: 0;
-}
-    h2 {
-  margin: auto;
-  width: 90%;
-  text-align: center;
-  padding: 10px;
-}
-    h1{
-  background: #D1DEE3;
-  color:black;
-  padding:.5em;
-  position: relative;
-}
-label::before{
-  content:"";
-  display: inline-block;
-  border: 15px solid transparent;
-  border-left:20px solid #619FBC;
-}
-label{
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-div.p{
-  max-height:0px;
-  overflow: hidden;
-  transition:max-height 0.5s;
-  background-color: white;
-  box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-div.p p {
-  padding:1em;
-}
-input:checked ~ h1 label::before{
-  border-left:15px solid transparent;
-  border-top:20px solid #619FBC;
-  margin-top:12px;
-  margin-right:10px;
-}
-input:checked ~ h1 ~ div.p{
-  max-height:200px;
-}
+      body, p, input, label {
+    font-size: 18px;
+  }
+   @media screen and (min-width: 900px) {
+    body, p, input, label  {
+    font-size: 24px;
+    }
+        iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 900px;
+  }
+         h3 {
+               width: 50%;
+  }
+  
+  .header a {
+    float: left;
+    color: black;
+    text-align: left;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+          }
+  @media screen and (min-width: 320px) {
+    body, p, input, label  {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+    iframe {
+    width: 100%;
+    height: 900px;
+  }
+   h3 {
+    width: 70%;
+  }
+  .header {
+    text-align: center;
+  }
+  .header a {
+    float: center;
+    color: black;
+    text-align: center;
+    align-content: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  }
+  div.c{
+    position: relative;
+    margin:1em;
+  }
+  input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    visibility: 0;
+  }
+      h2 {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+  }
+      h1{
+    background: #D1DEE3;
+    color:black;
+    padding:.5em;
+    position: relative;
+  }
+  label::before{
+    content:"";
+    display: inline-block;
+    border: 15px solid transparent;
+    border-left:20px solid #619FBC;
+  }
+  label{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  div.p{
+    max-height:0px;
+    overflow: hidden;
+    transition:max-height 0.5s;
+    background-color: white;
+    box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  div.p p {
+    padding:1em;
+  }
+  input:checked ~ h1 label::before{
+    border-left:15px solid transparent;
+    border-top:20px solid #619FBC;
+    margin-top:12px;
+    margin-right:10px;
+  }
+  input:checked ~ h1 ~ div.p{
+    max-height:200px;
+  }
+  
+  .header {
+    overflow: hidden;
+    background-color: grey;
+    padding: 20px 10px;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: grey;
+    color: black;
+  }
+  
+  .header a.active {
+    background-color: grey;
+    color: white;
+  }
+  .intro {
+    padding: 20px;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: grey;
+    color: white;
+  }
+  .frame-div, iframe {
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
 
-.header {
-  overflow: hidden;
-  background-color: grey;
-  padding: 20px 10px;
-}
+  }
 
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.header a:hover {
-  background-color: grey;
-  color: black;
-}
-
-.header a.active {
-  background-color: grey;
-  color: white;
-}
-.intro {
-  padding: 20px;
-  text-align: center;
-}
-footer {
-  text-align: center;
-  padding: 3px;
-  background-color: grey;
-  color: white;
-}
-
-
-</style>
+  </style>
 </head>
+  
 <body>
-     <div class="header">
-  <a class="navbar-brand" href="/"><img src="https://holtmfg.com/img/logoHoltMFG-white.png" class="d-inline-block align-top" ></a>
-  <div class="header-right">
+  <div class="header">
+    <a class="navbar-brand" href="/"><img src="https://holtmfg.com/img/logoHoltMFG-white.png" class="d-inline-block align-top" ></a>
   </div>
 </div>
-    
-      </div>
-      <h2><i><strong>[  D R A F T  ]</strong></i></h2>
-  <h2>Epicor / Pioneer Project</h2>
-  <p class="intro">[Pending Introductory / Why Statement]</p>
-  <h2>Frequently Asked Questions</h2>
-  <div class="faqs">
-  <script>
-var newsFeed
-$.get('https://sheets.googleapis.com/v4/spreadsheets/1sbjzG8P4f1T4tipxbT15a2zPTXSHZCnhqwQlg2M3_fM/values/_approved_faqs!A2:B?key=AIzaSyCIvhf1K415cwKoG1VR3rJ2vIs4C-M68ms', function(data){
-  var newsData = data.values;
-  var firstNews = newsData[0][1];
-  newsFeed = [];
-  newsData.forEach(function(value) {
-    var newitems={};
-    newitems.questions = value[0];
-    newitems.answers = value[1];
-    newsFeed.push(newitems);
+        <h2><i><strong>[  D R A F T  ]</strong></i></h2>
+    <h2>Epicor / Pioneer Project</h2>
+    <p class="intro">[Pending Introductory / Why Statement]</p>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faqs">
+    <script>
+  var newsFeed
+  $.get('https://sheets.googleapis.com/v4/spreadsheets/1sbjzG8P4f1T4tipxbT15a2zPTXSHZCnhqwQlg2M3_fM/values/_approved_faqs!A2:B?key=AIzaSyCIvhf1K415cwKoG1VR3rJ2vIs4C-M68ms', function(data){
+    var newsData = data.values;
+    var firstNews = newsData[0][1];
+    newsFeed = [];
+    newsData.forEach(function(value) {
+      var newitems={};
+      newitems.questions = value[0];
+      newitems.answers = value[1];
+      newsFeed.push(newitems);
+    });
+    iterate(newsFeed);
   });
-//  var faqs = JSON.stringify(newsFeed)
-  iterate(newsFeed);
-});
-function iterate(arr) {
-  var faq_n = 0;
-  arr.forEach(i => {
-    faq_n++;
-    var faq_q = i.questions;
-    var faq_a = i.answers;
-    var str = `<div class="c">
-  <input type="checkbox" id="faq-${faq_n}">
-  <h1><label for="faq-${faq_n}">${faq_q}</label></h1>
-  <div class="p">
-    <p>${faq_a}</p>
+  function iterate(arr) {
+    var faq_n = 0;
+    arr.forEach(i => {
+      faq_n++;
+      var faq_q = i.questions;
+      var faq_a = i.answers;
+      var str = `<div class="c">
+    <input type="checkbox" id="faq-${faq_n}">
+    <h1><label for="faq-${faq_n}">${faq_q}</label></h1>
+    <div class="p">
+      <p>${faq_a}</p>
+    </div>
+  </div>`
+      $(".faqs").append(str);
+    });
+  };
+  </script>
+    </div>
+  <div align="center">
+    <h3>Don't see the answers you're looking for?</h3>
   </div>
-</div>`
-    $(".faqs").append(str);
-  });
-};
-</script>
-  </div>
-<div align="center">
-  <h3>Don't see the answers you're looking for?</h3>
- <iframe src="https://app.smartsheet.com/b/form/cbae30ef3c7e4923818ea50b4d19a0c8" frameborder="0" marginheight="0" marginwidth="0" align="center">Loading�</iframe>
-  </div>
+  <div class="frame-div">
+   <iframe src="https://app.smartsheet.com/b/form/cbae30ef3c7e4923818ea50b4d19a0c8" frameborder="0" marginheight="0" marginwidth="0" align="center">Loading�</iframe>
 
-
-        <footer>
-    <p>For support with this page:<br>
-    <a href="mailto:brad.rogers@holtmfg.com?subject=FAQ Site">Contact Us</a></p>
-  </footer>
-</body>
-</html>
+  </div>
+  
+          <footer>
+      <p>For support with this page:<br>
+      <a href="mailto:brad.rogers@holtmfg.com?subject=FAQ Site">Contact Us</a></p>
+    </footer>
+  </body>
+  </html>
+  
