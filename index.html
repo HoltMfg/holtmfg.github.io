@@ -29,22 +29,41 @@
     font-size: 18px;
   }
   
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 320px) {
     body, p, input, label  {
-      font-size: calc(16px + 6 * ((100vw - 1200px) / 900));
+      font-size: calc(14px + 6 * ((100vw - 320px) / 680));
     }
     iframe {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    width: 100%;
     height: 900px;
-  }    
   }
-  
+   h3 {
+    width: 70%;
+  }
+  .header {
+    text-align: center;
+  }
+  .header a {
+    float: center;
+    color: black;
+    text-align: center;
+    align-content: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  }
+
   @media screen and (min-width: 900px) {
     body, p, input, label  {
-      font-size: calc(16px + 6 * ((100vw - 1100px) / 680));
+      font-size: 20px;
+    }
+    body {
+      max-width: 1080px !important;
+	margin: 0 auto !important; 
+	float: none !important; 
     }
 
     iframe {
@@ -73,33 +92,19 @@
     margin: 0 auto;
   }
 }
-
-  @media screen and (min-width: 320px) {
+@media screen and (min-width: 1200px) {
     body, p, input, label  {
-      font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+      font-size: 22px;
     }
     iframe {
-    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
     height: 900px;
+  }    
   }
-   h3 {
-    width: 70%;
-  }
-  .header {
-    text-align: center;
-  }
-  .header a {
-    float: center;
-    color: black;
-    text-align: center;
-    align-content: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px; 
-    line-height: 25px;
-    border-radius: 4px;
-  }
-  }
+  
   div.c{
     position: relative;
     margin:1em;
@@ -181,6 +186,7 @@
   .intro {
     padding: 0px 20px 0px 20px;
     text-align: left;
+
   }
   footer {
     text-align: center;
@@ -202,15 +208,16 @@
     text-align: center;
     align-content: center;
     padding: 2vw;
-    max-width: 90vw;
+
     margin: 5px;;
   }
 
-  .status-graphic {
+ .status-image {
     float:center;
     text-align: center;
     align-content:center;
-    max-width: 90vw;
+    object-fit: contain;
+    max-width: 100%;
   }
 
   </style>
@@ -227,7 +234,7 @@
       <p class="intro">Implementing Epicor ERP means that Holt Manufacturing will have an integrated solution to help manage end-to-end processes and translate consolidated business data into useful, actionable information.</p>
       <div class="project-status">
         <h4>Project Status</h4>
-        <a class="status-graphic" href="/"><img src="designphase.png" class="status-graphic"></a>
+        <a class="status-graphic" href="/"><img src="designphase.png" class="status-image"></a>
       </div>
       <h4>Frequently Asked Questions</h4>
     <div class="container">
