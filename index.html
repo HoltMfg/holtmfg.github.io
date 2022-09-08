@@ -17,14 +17,13 @@
   </script>
     <style>
   @import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,700");
-  *, *::after, *::before{
+  *::after, *::before{
     margin: 0;
     padding: 0;
     box-sizing:border-box;
   }
   body, footer, form, div {
     font-family: "proxima-nova", sans-serif;
-    //background: #000000;
   }
       body, p, input, label {
     font-size: 18px;
@@ -33,7 +32,14 @@
   @media screen and (min-width: 1200px) {
     body, p, input, label  {
       font-size: calc(16px + 6 * ((100vw - 1200px) / 900));
-    }    
+    }
+    iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 900px;
+  }    
   }
   
   @media screen and (min-width: 900px) {
@@ -48,12 +54,9 @@
     width: 50%;
     height: 900px;
   }
-
-
   h3 {
     width: 50%;
   }
-  
   .header a {
     float: left;
     color: black;
@@ -69,10 +72,11 @@
     max-width: 60vw;
     margin: 0 auto;
   }
-          }
+}
+
   @media screen and (min-width: 320px) {
     body, p, input, label  {
-      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+      font-size: calc(14px + 6 * ((100vw - 320px) / 680));
     }
     iframe {
     width: 100%;
@@ -151,7 +155,7 @@
     margin-right:10px;
   }
   input:checked ~ h4 ~ div.p{
-    max-height:200px;
+    max-height:300px;
   }
   
   .header {
@@ -175,8 +179,8 @@
     color: white;
   }
   .intro {
-    padding: 20px;
-    text-align: center;
+    padding: 0px 20px 0px 20px;
+    text-align: left;
   }
   footer {
     text-align: center;
@@ -192,33 +196,56 @@
 
   }
 
+.project-status {
+    float: center;
+    color: black;
+    text-align: center;
+    align-content: center;
+    padding: 2vw;
+    max-width: 90vw;
+    margin: 5px;;
+  }
+
+  .status-graphic {
+    float:center;
+    text-align: center;
+    align-content:center;
+    max-width: 90vw;
+  }
+
   </style>
 </head>
   
 <body>
   <div class="header">
-    <a class="navbar-brand" href="/"><img src="https://holtmfg.com/img/logoHoltMFG-white.png" class="d-inline-block align-top" ></a>
+    <a class="navbar-brand" href="/"><img src="logoHoltMFG-white.png" class="d-inline-block align-top" ></a>
   </div>
 </div>
-    <h4><i><strong>[  D R A F T  ]</strong></i></h4>
-    <h4>Epicor / Pioneer Project</h4>
-    <p class="intro">[Pending Introductory / Why Statement]</p>
-    <h4>Frequently Asked Questions</h4>
+    <h4>Project: Pioneer Information</h4>
+    <p class="intro">Businesses typically rely on multiple applications to coordinate the organization to produce, delivery, invoice and receive payment for a good or service (“Order to Cash”).</p>
+      <p class="intro">When the applications are not digitally connected (“integrated”), the data about the business is separated and segmented making it difficult correlate and make accurate data-driven decisions.</p>  
+      <p class="intro">Implementing Epicor ERP means that Holt Manufacturing will have an integrated solution to help manage end-to-end processes and translate consolidated business data into useful, actionable information.</p>
+      <div class="project-status">
+        <h4>Project Status</h4>
+        <a class="status-graphic" href="/"><img src="designphase.png" class="status-graphic"></a>
+      </div>
+      <h4>Frequently Asked Questions</h4>
     <div class="container">
       <div class="faqs">
       </div>
     </div>
-  <div align="center">
+  
+    <div align="center">
     <h4>Don't see the answers you're looking for?</h4>
   </div>
-  <div class="frame-div">
-   <iframe src="https://app.smartsheet.com/b/form/cbae30ef3c7e4923818ea50b4d19a0c8" frameborder="0" marginheight="0" marginwidth="0" align="center">Loading�</iframe>
 
+  <div class="frame-div">
+   <iframe src="https://app.smartsheet.com/b/form/cbae30ef3c7e4923818ea50b4d19a0c8" frameborder="0" marginheight="0" marginwidth="0" align="center">Loading...</iframe>
   </div>
   
           <footer>
       <p>For support with this page:<br>
-      <a href="mailto:brad.rogers@holtmfg.com?subject=FAQ Site">Contact Us</a></p>
+      <a href="mailto:brad.rogers@holtmfg.com?subject=Project: Pioneer / Epicor FAQ Site">Contact Us</a></p>
     </footer>
   </body>
   <script>
