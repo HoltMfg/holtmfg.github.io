@@ -31,7 +31,7 @@
     box-sizing:border-box;
   }
   body, footer, form, div {
-    font-family: "proxima-nova", sans-serif;
+    font-family: sans-serif;
   }
       body, p, input, label {
     font-size: 18px;
@@ -240,6 +240,52 @@
     margin-block-end: 0.33em;
   }
 
+  /* (A) LIGHTBOX BACKGROUND */
+#lightbox {
+  /* (A1) COVERS FULLSCREEN */
+  position: fixed; z-index: 999;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+ 
+  /* (A2) BACKGROUND */
+  background: rgba(0, 0, 0, 0.5);
+ 
+  /* (A3) CENTER IMAGE ON SCREEN */
+  display: flex;
+  align-items: center;
+  align-items: center;
+ 
+  /* (A4) HIDDEN BY DEFAULT */
+  visibility: hidden;
+  opacity: 0;
+ 
+  /* (A5) SHOW/HIDE ANIMATION */
+  transition: opacity ease 0.4s;
+}
+ 
+/* (A6) TOGGLE VISIBILITY */
+#lightbox.show {
+  visibility: visible;
+  opacity: 1;
+}
+ 
+/* (B) LIGHTBOX IMAGE */
+#lightbox img {
+  /* (B1) DIMENSIONS */
+  width: 100%;
+  height: auto;
+ 
+  /* (B2) IMAGE FIT */
+  /* contain | cover | fill | scale-down */
+  object-fit: cover;
+}
+ 
+
+#lightbox img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
   </style>
 </head>
   
@@ -249,14 +295,18 @@
   </div>
 <div class="intro">
     <h4>What is "Project: Pioneer"?</h4>
-    <p class="intro">Businesses typically rely on software applications to coordinate an organization and produce, deliver, invoice and receive payment for a good or service (“Order to Cash”).</p>
-      <p class="intro">When the applications are not digitally connected (“integrated”), the business data is segmented making it difficult to make accurate data-driven decisions.</p>  
-      <p class="intro">The objective of this project is to venture ('pioneer') beyond the legacy business applications by implementing an Enterprise Resource Planning system ("ERP"), provided by Epicor.</p>
-      <p class="intro">As a result, Holt Manufacturing will have an integrated solution to help manage end-to-end processes and translate consolidated business data into useful, actionable information.</p>
+    <p class="intro">Businesses typically rely on multiple software applications to coordinate an organization and produce, deliver, invoice and receive payment for a good or service (“Order to Cash”).</p>
+    <p class="intro">When the applications are not digitally connected (“integrated”), the business data is segmented making it difficult to make accurate data-driven decisions.</p>  
+    <p class="intro">The objective of this project is to venture ('pioneer') beyond the legacy business applications by implementing an Enterprise Resource Planning system ("ERP"), provided by Epicor.</p>
+    <p class="intro">As a result, Holt Manufacturing will have an integrated solution to help manage end-to-end processes and translate consolidated business data into useful, actionable information.</p>
     </div>
       <div class="project-status">
-        <h4>Project Status</h4>
-        <a class="status-graphic"><img src="designphase.png" class="status-image"></a>
+        <h4>Current Project Status</h4>
+        <!-- (A) LIGHTBOX CONTAINER -->
+ 
+<!-- (B) THE IMAGES -->
+<img src="designphase.png" class="status-image"/>
+
       </div>
       <h4>Frequently Asked Questions</h4>
       <h6 style="text-align:center">(Select Question to Show Answer)</h6>
@@ -280,7 +330,7 @@
   </body>
   <script>
     var newsFeed
-    $.get('https://sheets.googleapis.com/v4/spreadsheets/1sbjzG8P4f1T4tipxbT15a2zPTXSHZCnhqwQlg2M3_fM/values/_approved_faqs!A2:B?key=AIzaSyCIvhf1K415cwKoG1VR3rJ2vIs4C-M68ms', function(data){
+    $.get('https://sheets.googleapis.com/v4/spreadsheets/1sbjzG8P4f1T4tipxbT15a2zPTXSHZCnhqwQlg2M3_fM/values/approvedFAQs!C1:D?key=AIzaSyCIvhf1K415cwKoG1VR3rJ2vIs4C-M68ms', function(data){
       var newsData = data.values;
       var firstNews = newsData[0][1];
       newsFeed = [];
