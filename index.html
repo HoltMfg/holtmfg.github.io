@@ -14,18 +14,20 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="referrer" content="strict-origin-when-cross-origin">
-	<meta name="twitter:card" content="summary_large_image" />
+
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content= "Project: Pioneer Info & FAQs" />
       <meta name="twitter:url" content="https://holtmfg.github.io/"/>
       <meta name="twitter:description" content="Holt Mfg ERP Information & Frequently Asked Questions"/>
       <meta name="twitter:image" content="proj_pioneer_graphic.png"/>
-    <link rel='SHORTCUT ICON' href='holt-h.png' type='image/x-icon' />
+    
+      <link rel='SHORTCUT ICON' href='holt-h.png' type='image/x-icon'/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY3QP72TFW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
+
     gtag('config', 'G-LY3QP72TFW');
   </script>
     <style>
@@ -42,8 +44,7 @@
     font-size: 18px;
   }
 
-  
-  @media screen and (min-width: 320px) {
+  @media screen and (min-width: 550px) {
     body, p, input, label  {
       font-size: calc(14px + 6 * ((100vw - 320px) / 680));
     }
@@ -51,12 +52,7 @@
       display:block;
       margin-left:auto;
       margin-right:auto;
-
     width: 100%;
-
-  }
-  .frame-div {
-    text-align:center;
   }
    h3 {
     width: 70%;
@@ -86,13 +82,11 @@
 	margin: 0 auto !important; 
 	float: none !important; 
     }
-
     iframe {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-
   }
   h3 {
     width: 50%;
@@ -118,13 +112,14 @@
       font-size: 22px;
     }
     iframe {
-
     width: 50%;
-
   }    
   }
-  
   div.c {
+    position: relative;
+    margin:1em;
+  }
+  div.e {
     position: relative;
     margin:1em;
   }
@@ -139,7 +134,6 @@
   }
       h2, h4 {
     margin: auto;
-
     text-align: center;
     padding: 10px;
   }
@@ -150,12 +144,27 @@
     position: relative;
     text-align: left;
   }
+ div.e h4 {
+    background: #f4e5f4;
+    color:black;
+    padding:.5em;
+    position: relative;
+    text-align: left;
+  }
+
   label::before{
     content:"";
     display: inline-block;
     border: 15px solid transparent;
     border-left:20px solid #619FBC;
   }
+  label.demogif::before{
+    content:"";
+    display: inline-block;
+    border: 15px solid transparent;
+    border-left:20px solid #8f5a8f;
+  }
+
   label{
     cursor: pointer;
     position: relative;
@@ -169,7 +178,18 @@
     background-color: white;
     box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
   }
+  div.d{
+    max-height:0px;
+    overflow: hidden;
+    text-align:center;
+    transition:max-height 0.5s;
+    background-color: white;
+    box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
   div.p p {
+    padding:1em;
+  }
+  div.d p {
     padding:1em;
   }
   input:checked ~ h4 label::before{
@@ -178,26 +198,34 @@
     margin-top:12px;
     margin-right:10px;
   }
+
+  input:checked ~ h4 label.demogif::before{
+    border-left:15px solid transparent;
+    border-top:20px solid #8f5a8f;
+    margin-top:12px;
+    margin-right:10px;
+  }
+
+
   input:checked ~ h4 ~ div.p{
     max-height:300px;
   }
-  
+  input:checked ~ h4 ~ div.d{
+    max-height:600px;
+  }
   .header {
     overflow: hidden;
     background-color: grey;
     padding: 20px 10px;
   }
-  
   .header a.logo {
     font-size: 25px;
     font-weight: bold;
   }
-  
   .header a:hover {
     background-color: grey;
     color: black;
   }
-  
   .header a.active {
     background-color: grey;
     color: white;
@@ -205,19 +233,12 @@
   .intro {
     padding: 0px 3vw 0px 3vw;
     text-align: left;
-
   }
   footer {
     text-align: center;
     padding: 3px;
     background-color: grey;
     color: white;
-  }
-  .frame-div, iframe {
-    display: block;
-
-    margin: 0 auto;
-
   }
 
 .project-status {
@@ -226,10 +247,8 @@
     text-align: center;
     align-content: center;
     padding: 2vw;
-
     margin: 5px;;
   }
-
  .status-image {
     float:center;
     text-align: center;
@@ -238,60 +257,20 @@
     max-width: 100%;
   }
   iframe {
-    height: 600px;
+    height: 500px;
   }
   h6 {
     margin-block-start: 0.33em;
     margin-block-end: 0.33em;
   }
+  .steps {
+    text-align: left;
+  }
+  .note {
+    margin-left: 30px;
+  }
 
-  /* (A) LIGHTBOX BACKGROUND */
-#lightbox {
-  /* (A1) COVERS FULLSCREEN */
-  position: fixed; z-index: 999;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
- 
-  /* (A2) BACKGROUND */
-  background: rgba(0, 0, 0, 0.5);
- 
-  /* (A3) CENTER IMAGE ON SCREEN */
-  display: flex;
-  align-items: center;
-  align-items: center;
- 
-  /* (A4) HIDDEN BY DEFAULT */
-  visibility: hidden;
-  opacity: 0;
- 
-  /* (A5) SHOW/HIDE ANIMATION */
-  transition: opacity ease 0.4s;
-}
- 
-/* (A6) TOGGLE VISIBILITY */
-#lightbox.show {
-  visibility: visible;
-  opacity: 1;
-}
- 
-/* (B) LIGHTBOX IMAGE */
-#lightbox img {
-  /* (B1) DIMENSIONS */
-  width: 100%;
-  height: auto;
- 
-  /* (B2) IMAGE FIT */
-  /* contain | cover | fill | scale-down */
-  object-fit: cover;
-}
- 
-
-#lightbox img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
-  </style>
+</style>
 </head>
   
 <body>
@@ -299,34 +278,43 @@
     <a class="status-graphic" href="https://www.holtmfg.com/"><img src="proj_pioneer_graphic.png" class="status-image" ></a>
   </div>
 <div class="intro">
-    <h4>What is "Project: Pioneer"?</h4>
-    <p class="intro">Businesses typically rely on multiple software applications to coordinate an organization and produce, deliver, invoice and receive payment for a good or service (“Order to Cash”).</p>
-    <p class="intro">When the applications are not digitally connected (“integrated”), the business data is segmented making it difficult to make accurate data-driven decisions.</p>  
+    <h4>WHAT IS "PROJECT: PIONEER"?</h4>
+    <p class="intro">Businesses typically rely on multiple software applications to coordinate an organization and produce, deliver, invoice and receive payment for a good or service (“Order to Cash").</p>
+    <p class="intro">When the applications are not digitally connected (“integrated"), the business data is segmented making it difficult to make accurate data-driven decisions.</p>  
     <p class="intro">The objective of this project is to venture ('pioneer') beyond the legacy business applications by implementing an Enterprise Resource Planning system ("ERP"), provided by Epicor.</p>
     <p class="intro">As a result, Holt Manufacturing will have an integrated solution to help manage end-to-end processes and translate consolidated business data into useful, actionable information.</p>
     </div>
       <div class="project-status">
-        <h4>Current Project Status</h4>
-        <!-- (A) LIGHTBOX CONTAINER -->
- 
-<!-- (B) THE IMAGES -->
+        <h4>CURRENT PROJECT STATUS</h4>
 <img src="designphase.png" class="status-image"/>
-
       </div>
-      <h4>Frequently Asked Questions</h4>
+      <h4>FREQUENTLY ASKED QUESTIONS</h4>
       <h6 style="text-align:center">(Select Question to Show Answer)</h6>
     <div class="container">
       <div class="faqs">
       </div>
     </div>
-  
-    <div align="center">
-    <h4>Don't see the answers you're looking for?</h4>
-  </div>
 
-  <div class="frame-div">
-   <iframe src="https://app.smartsheet.com/b/form/cbae30ef3c7e4923818ea50b4d19a0c8" frameborder="0" marginheight="0" marginwidth="0" align="center">Loading...</iframe>
+  <h4>HOW-TO REFERENCES</h4>
+  <h6 style="text-align:center">(Select to See Demo)</h6>
+<div class="container">
+  <div class="demos">
+
   </div>
+<div class="note">
+  <h5>More to come...</h5>
+</div>
+</div>
+
+<div align="center">
+  <h4>STILL HAVE QUESTIONS?</h4>
+</div>
+
+<div class="frame-div">
+ <iframe src="https://app.smartsheet.com/b/form/cbae30ef3c7e4923818ea50b4d19a0c8" frameborder="0" marginheight="0" marginwidth="0" align="center">Loading...</iframe>
+</div>
+
+
   
           <footer>
       <p>For support with this page:<br>
@@ -337,7 +325,6 @@
     var newsFeed
     $.get('https://sheets.googleapis.com/v4/spreadsheets/1sbjzG8P4f1T4tipxbT15a2zPTXSHZCnhqwQlg2M3_fM/values/approvedFAQs!C2:D?key=AIzaSyCIvhf1K415cwKoG1VR3rJ2vIs4C-M68ms', function(data){
       var newsData = data.values;
-      var firstNews = newsData[0][1];
       newsFeed = [];
       newsData.forEach(function(value) {
         var newitems={};
@@ -364,5 +351,27 @@
       });
     };
     </script>
+
+      <script>
+    var gifFiles
+    $.get('https://sheets.googleapis.com/v4/spreadsheets/1sbjzG8P4f1T4tipxbT15a2zPTXSHZCnhqwQlg2M3_fM/values/demo_gifs!A2:C?key=AIzaSyCIvhf1K415cwKoG1VR3rJ2vIs4C-M68ms', function(data){
+      var gifData = data.values;
+      var gif_n = 1;
+      gifData.forEach(function(value) {
+        var gif_q = value[0];
+        var gif_a = value[1];
+        var gif_steps = value[2];
+        var gifs = `<div class="e">
+      <input type="checkbox" id="demo-${gif_n}">
+      <h4><label for="demo-${gif_n}" class="demogif">${gif_q}</label></h4>
+      <div class="d">
+        <p><img src="${gif_a}" class="status-image"/></p>
+        <p class="steps">${gif_steps}</p>
+      </div>
+    </div>`
+        $(".demos").append(gifs);
+        gif_n++
+      });
+    });
+    </script>
   </html>
-  
