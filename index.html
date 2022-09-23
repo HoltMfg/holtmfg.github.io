@@ -193,6 +193,7 @@
   }
   div.p p {
     padding:1em;
+    text-align:left;
   }
   div.d p {
     padding:1em;
@@ -349,7 +350,7 @@
       <input type="checkbox" id="faq-${faq_n}">
       <h4><label for="faq-${faq_n}">${faq_q}</label></h4>
       <div class="p">
-        <p>${faq_a}</p>
+        <p class="steps">${faq_a}</p>
       </div>
     </div>`
         $(".faqs").append(str);
@@ -371,7 +372,7 @@
       <h4><label for="demo-${gif_n}" class="demogif">${gif_q}</label></h4>
       <div class="d">
         <p><img src="${gif_a}" class="status-image"/></p>
-        <p class="steps">${gif_steps}</p>
+    <!---    <p class="steps">${gif_steps}</p> ---!>
       </div>
     </div>`
         $(".demos").append(gifs);
