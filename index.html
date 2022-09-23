@@ -192,11 +192,11 @@
     box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
   }
   div.p p {
-    padding:1em;
+    padding:10px;
     text-align:left;
   }
   div.d p {
-    padding:1em;
+    padding:10px;
   }
   input:checked ~ h4 label::before{
     border-left:15px solid transparent;
@@ -212,12 +212,11 @@
     margin-right:10px;
   }
 
-
   input:checked ~ h4 ~ div.p{
     max-height:300px;
   }
   input:checked ~ h4 ~ div.d{
-    max-height:600px;
+    max-height:100vw;
   }
   .header {
     overflow: hidden;
@@ -372,7 +371,7 @@
       <h4><label for="demo-${gif_n}" class="demogif">${gif_q}</label></h4>
       <div class="d">
         <p><img src="${gif_a}" class="status-image"/></p>
-    <!---    <p class="steps">${gif_steps}</p> ---!>
+    <p class="steps">${gif_steps}</p>
       </div>
     </div>`
         $(".demos").append(gifs);
