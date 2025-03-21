@@ -2,6 +2,253 @@
   <head>
 
 
+  <style>
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,700");
+  *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  }
+  body, footer, form, div {
+    font-family: sans-serif;
+  }
+      body, p, input, label {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 320px) {
+    body, p, input, label  {
+      font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+    }
+    iframe {
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    width: 100%;
+  }
+   h3 {
+    width: 70%;
+  }
+  .header {
+    text-align: center;
+  }
+  .header a {
+    float: center;
+    color: black;
+    text-align: center;
+    align-content: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  }
+
+  @media screen and (min-width: 900px) {
+    body, p, input, label  {
+      font-size: 20px;
+    }
+    body {
+      max-width: 1080px !important;
+	margin: 0 auto !important; 
+	float: none !important; 
+    }
+    iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  h3 {
+    width: 50%;
+  }
+  .header a {
+    float: left;
+    color: black;
+    text-align: left;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  div.container {
+    display: block;
+    max-width: 60vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+    body, p, input, label  {
+      font-size: 22px;
+    }
+    iframe {
+    width: 50%;
+  }    
+  div.container {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  }
+  div.c {
+    position: relative;
+    margin:1em;
+  }
+  div.e {
+    position: relative;
+    margin:1em;
+  }
+  input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    visibility: 0;
+  }
+      h2, h4 {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+  }
+      h1, div.c h4 {
+    background: #D1DEE3;
+    color:black;
+    padding:.5em;
+    position: relative;
+    text-align: left;
+  }
+ div.e h4 {
+    background: #f4e5f4;
+    color:black;
+    padding:.5em;
+    position: relative;
+    text-align: left;
+  }
+
+  label::before{
+    content:"";
+    display: inline-block;
+    border: 15px solid transparent;
+    border-left:20px solid #619FBC;
+  }
+  label.demogif::before{
+    content:"";
+    display: inline-block;
+    border: 15px solid transparent;
+    border-left:20px solid #8f5a8f;
+  }
+
+  label{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  div.p{
+    max-height:0px;
+    overflow: hidden;
+    transition:max-height 0.5s;
+    background-color: white;
+    box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  div.d{
+    max-height:0px;
+    overflow: hidden;
+    text-align:center;
+    transition:max-height 0.5s;
+    background-color: white;
+    box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  div.p p {
+    padding:10px;
+    text-align:left;
+  }
+  div.d p {
+    padding: 10px 3em;
+  }
+  input:checked ~ h4 label::before{
+    border-left:15px solid transparent;
+    border-top:20px solid #619FBC;
+    margin-top:12px;
+    margin-right:10px;
+  }
+
+  input:checked ~ h4 label.demogif::before{
+    border-left:15px solid transparent;
+    border-top:20px solid #8f5a8f;
+    margin-top:12px;
+    margin-right:10px;
+  }
+
+  input:checked ~ h4 ~ div.p{
+    max-height:300px;
+  }
+  input:checked ~ h4 ~ div.d{
+    max-height:100vw;
+  }
+  .header {
+    overflow: hidden;
+    background-color: grey;
+    padding: 20px 10px;
+  }
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .header a:hover {
+    background-color: grey;
+    color: black;
+  }
+  .header a.active {
+    background-color: grey;
+    color: white;
+  }
+  .intro {
+    padding: 0px 3vw 0px 3vw;
+    text-align: left;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: grey;
+    color: white;
+  }
+
+.project-status {
+    float: center;
+    color: black;
+    text-align: center;
+    align-content: center;
+    padding: 2vw;
+    margin: 5px;;
+  }
+ .status-image {
+    float:center;
+    text-align: center;
+    align-content:center;
+    object-fit: contain;
+    max-width: 100%;
+  }
+  iframe {
+    height: 500px;
+  }
+  h6 {
+    margin-block-start: 0.33em;
+    margin-block-end: 0.33em;
+  }
+  .steps {
+    text-align: left;
+    position: relative;
+    z-index: 100;
+  }
+  .note {
+    margin-left: 30px;
+  }
+
 </style>
 </head>
   
@@ -10,5 +257,8 @@
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
+	<div class="project-status">
+    <a class="status-image" href="https://www.holtmfg.com/"><img src="proj_pioneer_graphic.png" class="status-image" ></a>
+  </div>
 </body>
 </html>
